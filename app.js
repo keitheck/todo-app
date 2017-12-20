@@ -1,5 +1,8 @@
 'use strict';
 
+
+
+
 var btn = document.getElementById('btn');
 var input = document.getElementById('item');
 var tasks = document.getElementById('tasks');
@@ -18,7 +21,7 @@ function save() {
 }
 
 function create() {
-  var val = inpjut.value;
+  var val = input.value;
   var item = document.createElement('li');
   item.appendChild(document.createTextNode(val));
   tasks.appendChild(item);
@@ -31,7 +34,7 @@ function load() {
     for (var x = 0; x < list.length; x++){
       item = document.createElement('li');
       item.appendChild(document.createTextNode(list[x]));
-      task.appendChild(item);
+      tasks.appendChild(item);
     }
   }
 }
@@ -43,4 +46,4 @@ function render() {
 
 load();
 
-btn.addEventListener("click", render() );
+btn.addEventListener('click', render);
